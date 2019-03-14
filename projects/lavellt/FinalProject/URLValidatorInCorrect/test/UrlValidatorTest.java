@@ -114,4 +114,24 @@ public class UrlValidatorTest extends TestCase {
 	  System.out.println("Expecting false");
 	  System.out.println("Result = " + urlVal.isValidScheme("://"));
    } 
+   
+   public void testIsValidQueryUnitTest() {
+	  UrlValidator urlVal = new UrlValidator();
+	  
+	  System.out.println("\nUnit testing query ?hpt=sitenav");
+	  System.out.println("Expecting true");
+	  System.out.println("Result = " + urlVal.isValidQuery("?hpt=sitenav"));
+	  
+	  System.out.println("\nUnit testing query ?action=view");
+	  System.out.println("Expecting true");
+	  System.out.println("Result = " + urlVal.isValidQuery("?action=view"));
+	  
+	  System.out.println("\nUnit testing query ?action=edit&mode=up");
+	  System.out.println("Expecting true");
+	  System.out.println("Result = " + urlVal.isValidQuery("?action=edit&mode=up"));
+	  
+	  System.out.println("\nUnit testing empty query");
+	  System.out.println("Expecting true");
+	  System.out.println("Result = " + urlVal.isValidQuery(""));
+   }
 }
