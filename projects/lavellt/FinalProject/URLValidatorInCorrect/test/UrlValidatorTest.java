@@ -142,12 +142,6 @@ public class UrlValidatorTest extends TestCase {
 	   }
    }
    
-   public void testIsValid()
-   {
-	   //You can use this function for programming based testing
-
-   }
-
    public void testIsValidUnitTest() {
 	  UrlValidator urlVal = new UrlValidator();
 
